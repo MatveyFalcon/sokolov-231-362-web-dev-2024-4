@@ -1,0 +1,301 @@
+@font-face {
+	font-family: 'DrukTextWideCyr-Medium';
+	src: url('../fonts/druktextwidecyr-medium.eot'); 
+	src: url('../fonts/druktextwidecyr-medium.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/druktextwidecyr-medium.woff2') format('woff2'), 
+		url('../fonts/druktextwidecyr-medium.woff') format('woff'), 
+		url('../fonts/druktextwidecyr-medium.ttf') format('truetype'), 
+		url('../fonts/druktextwidecyr-medium.svg#druktextwidecyr-medium') format('svg'); 
+}
+
+body {
+  margin: 0;
+  font-family: "Commissioner", sans-serif;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
+  background-color: white;
+}
+
+.header {
+  background-color: white;
+  color: #1A1A1A;
+  z-index: 0; /* Шапка остается позади изображения */
+  position: fixed; /* Обеспечиваем наложение изображения поверх шапки */
+  width: 100%; /* Шапка растягивается на всю ширину окна */ 
+  transition: all 0.3s ease; /* Плавный переход при изменении стилей */
+}
+
+.header.scrolled {
+  z-index: 100; /* Шапка становится поверх всех слоев при скролле */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем тень для визуального эффекта */
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  color: #3B4649;
+  font-family: 'DrukTextWideCyr-Medium';     
+  font-weight: bold;
+}
+
+.MSokoloff {
+  font-weight: bolder;
+  max-width: 25px;
+  text-align: left;
+  margin-right: auto;
+}
+
+.write {
+  font-weight: bold;
+  display: inline-block; /* Для работы с шириной текста */
+  border-bottom: 2px solid #858585; /* Толщина и цвет линии */
+  padding-bottom: 2px; /* Отступ между текстом и линией */
+}
+
+.write3 {
+  font-weight: bold;
+  margin-left: 15px;
+  border: 2px solid #3B4649;
+  border-radius: 5px;
+  padding: 5px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  color: #1A1A1A;
+}
+
+.icon {
+  width: 21px;
+  margin-right: 10px;
+  margin-left: 240px;
+}
+
+.write1 {
+  font-weight: bold;
+  border: 2px solid #3B4649;
+  border-radius: 5px;
+  padding: 9px;
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  color: #3B4649;
+  transform: scale(1.3); /* Увеличивает кнопку на 30% */
+}
+
+.write2 {
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 9px;
+  width: 115px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #3B4649;
+  transform: scale(1.3); /* Увеличивает кнопку на 30% */
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column; /* Располагаем заголовок и текст в колонку */
+  justify-content: center; /* Выравниваем текст и заголовок по вертикали */
+  width: 398px;
+}
+
+.about-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3B4649; 
+  margin: 0 0 8px 0; /* Отступы для заголовка */
+}
+
+.button-container {
+  position: absolute; /* Абсолютное позиционирование кнопок относительно .me */
+  top: 50%; /* Располагаем кнопки по вертикали в середине блока */
+  margin-left: 400px;
+  transform: translateY(250%); /* Центрирование кнопок по вертикали */
+  display: flex;
+  flex-direction: row; /* Кнопки будут располагаться в строчку */
+  z-index: 2; /* Устанавливаем z-index, чтобы кнопки были поверх фона */
+  gap: 55px;
+}
+
+.main-menu {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 7px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-style a:hover{
+  color: #555c5e;
+}
+
+.menu-style a:active{
+  color: #1A1A1A;
+}
+
+.me {
+  margin: 0;
+  height: 611px;
+  text-align: center;
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Масштабирование фона по ширине и высоте */
+  width: 100vw; /* Занимает 100% ширины окна браузера */
+  margin-left: calc(-50vw + 50%); /* Выравнивание фона по центру страницы */
+  /*vw (viewport width) — это единица измерения в CSS, которая означает 1% от ширины окна просмотра */
+}
+
+.me img {
+  position: relative; /* Устанавливаем относительное позиционирование */
+  transform: translateX(255px) translateY(-25px); /* Сдвигаем изображение вправо и вверх */
+  z-index: 1; /* Устанавливаем изображение поверх шапки */
+  height: 636.3px;
+}
+
+
+.about-container {
+  display: flex; /* Располагаем изображение и текст в строку */
+  align-items: center; /* Выравнивание по вертикали относительно друг друга */
+  gap: 40px; /* Задаем отступ между изображением и текстом */
+  justify-content: center; /* Выравнивание элементов по горизонтальной оси */
+}
+
+.about-container p {
+  text-align: left; 
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #1A1A1A;
+}
+
+main p {
+  text-align: left;
+}
+
+main {
+  padding-top: 60px; /* Отступ сверху для основного контента */
+}
+
+.avatar {
+  height: 320px;
+  text-align: left;
+  margin: 0;
+}
+
+.avatar img {
+  height: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column; /* Изменяем направление на вертикальное для выравнивания элементов по центру */
+  align-items: center;
+  gap: 20px;
+}
+
+.skills-text {
+  text-align: center; /* Центрируем текст над таблицей */
+}
+
+.skills-table {
+  display: flex;
+  justify-content: center; /* Центрируем таблицу */
+}
+
+.exam-results {
+  width: 100%;
+  max-width: 600px; /* Ограничиваем ширину таблицы */
+  border-collapse: collapse;
+}
+
+.exam-results th, .exam-results td {
+  padding: 10px;
+  border: 1px solid #C5C5C5;
+  text-align: center;
+}
+
+.tech-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center; /* Выравниваем элементы по вертикали */
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  gap: 10px; /* Уменьшаем расстояние между текстом и плашками */
+  text-align: center;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 200px; /* Ширина плашек */
+  background-color: #F3F3F3;
+  border-radius: 5px;
+}
+
+.tech-text {
+  flex: 1; /* Позволяет тексту занимать свободное пространство */
+  max-width: 300px; /* Ограничиваем максимальную ширину текста */
+  text-align: left; /* Выравнивание текста по левому краю */
+  margin: 0; /* Убираем отступы сверху и снизу */
+  padding-left: 10px; /* Добавляем небольшое расстояние слева от текста */
+}
+
+.center {
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 40px 0; /* Отступы сверху и снизу */
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.border-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-container {
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: left; /* Вертикальное центрирование */
+  gap: 70px; /* Расстояние между элементами */
+  flex-wrap: wrap; /* Элементы переносятся на следующую строку, если не помещаются */
+  max-width: 1160px; /* Ограничиваем ширину футера */
+  margin: 0 auto; /* Центрируем футер на странице */
+}
+
+.footer-container p {
+  margin: 0; /* Убираем стандартные отступы */
+  font-size: 16px; /* Размер шрифта */
+}
+
+.footer-container a {
+  color: white; /* Цвет текста ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
